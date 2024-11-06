@@ -7,7 +7,7 @@ class Book:
         self.genre = genre
         self.publication_date = publication_date
         self.available = available
-#function to add books
+    #function to add books
     @handle_error
     def add_book(self, books):
         while True:
@@ -25,7 +25,7 @@ class Book:
             books[title] = Book(title, author, genre, publication_date)
             print(f"Book '{title}' added successfully.")
             break
-#function to borrow books
+    #function to borrow books
     @handle_error
     def borrow_book(self, books):
         title = input("Enter the title of the book to borrow: ")
@@ -34,7 +34,7 @@ class Book:
             print(f"You have borrowed '{title}'.")
         else:
             print("Book not available or doesn't exist.")
-#function to return a borrowed book
+    #function to return a borrowed book
     @handle_error
     def return_book(self, books):
         title = input("Enter the title of the book to return: ")
@@ -43,7 +43,7 @@ class Book:
             print(f"Book '{title}' returned successfully.")
         else:
             print("This book was not borrowed or doesn't exist.")
-#function to search through all books
+    #function to search through all books
     @handle_error
     def search_book(self, books):
         title = input("Enter the title of the book to search: ")
@@ -52,7 +52,7 @@ class Book:
             print(f"Book found: {book.title} by {book.author} (Genre: {book.genre}, Published on: {book.publication_date})")
         else:
             print("Book not found.")
-#function to display all books
+    #function to display all books
     @handle_error
     def display_all_books(self, books):
         if books:
